@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <style>
+          body{
+      padding: 25px;
+    }
+    .title {
+    	color: #5C6AC4;
+    }
+    </style>
+  </head>
+  <body>
+      <h1 class="title">Hello World! </h1>
+      <p id="currentTime"></p>
+      <script>
+        function showTime() {
+    const options = {
+      timeZone: 'Asia/Kolkata',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      year: 'numeric',
+      month: 'short',
+      day: '2-digit'
+    };
+    const istTime = new Date().toLocaleString('en-IN', options);
+    document.getElementById('currentTime').innerHTML = istTime;
+  }
+
+	showTime();
+	setInterval(showTime, 1000);
+      </script>
+  </body>
+</html>
